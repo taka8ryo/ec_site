@@ -1,0 +1,19 @@
+/* products index */
+.product-all{
+  text-align: center;
+}
+.card {
+  border: 1px solid #000;
+  margin-bottom: 50px;
+  margin-right: -50px;
+  position: relative;
+  p {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 71%;
+    left: 5%;
+    }
+  }
+

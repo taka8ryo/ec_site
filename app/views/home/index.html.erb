@@ -1,10 +1,16 @@
 <div class="container">
-  <h1>商品一覧</h1>
+  <h1 class="product-all">商品一覧</h1>
   <div class="row">
-    <div class="col-md-9">
-      <div class="card mb-3" style="max-width: 36rem;">
-        <%= render @products %>
+    <% @products.each do |product| %>
+      <div class="col-md-6">
+        <div class="card" style="width: 29rem; height: 21rem;">
+            <img class="card-img-top" src="<%= product.image %>" alt="<%= product.name %>">
+            <p class="card-text"><%= product.name %> (<%= product.price %>)</p>
+          <div class="card-body">
+            <h6 class="card-text"><%= product.description %></h6>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
