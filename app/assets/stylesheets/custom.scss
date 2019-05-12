@@ -17,3 +17,32 @@
     }
   }
 
+/* product show */
+.product-detail {
+  text-align: center;
+    .product-image {
+      width: 600px;
+      height: 300px;
+    }
+    .detail {
+      text-align: left;
+      width: 550px;
+      margin: 50px 100px 0 280px;
+      padding: 20px;
+      border: 1px solid #000;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:link {
+      color: #FFF;
+    }
+    .carton {
+      padding: 15px 250px;
+      margin: 40px;
+      font-size: 18px;
+    }
+}
