@@ -3,7 +3,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-md-6">
-        <%= link_to product_path(product) do %>
+        <%= link_to product_path(product), @product do %>
         <div class="card" style="width: 29rem; height: 21rem;">
             <img class="card-img-top" src="<%= product.image %>" alt="<%= product.name %>">
             <p class="card-text"><%= product.name %> (<%= product.price %><%= product.unit %>)</p>

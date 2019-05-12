@@ -1,14 +1,6 @@
 class Product < ApplicationRecord
+  include Hashid::Rails
+  belongs_to :basket_products
   mount_uploader :image, ImageUploader
+  has_many :basket_products, dependent: :destroy
 end
-
-module ProductDecorator
-  def publication_status
-    if published?
-      "Published at #{published_at.strftime('%A, %B %e')}"
-    else
-      "Unpublished"
-    end
-  end
-end
-

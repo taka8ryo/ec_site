@@ -3,9 +3,13 @@
     <img src="<%= @product.image %>" alt="product_iamge" class="product-image">
     <div class="detail">
       <h3><%= @product.name %></h3></p>
-      <p><%= @product.description %><br />
-          <%= @product.price %><%= @product.unit %></p>
+      <p>
+        <%= @product.description %><br />
+        <%= @product.price %><%= @product.unit %>
+      </p>
     </div>
-    <button type="button" class="btn btn-success carton"><%= link_to "買い物かごに入れる", "#" %></button>
+    <%= link_to  product_add_to_baskets_path(@product), method: :post do %>
+      <button type="button" class="btn btn-success carton">買い物かごに入れる</button>
+    <% end %>
   </div>
 <div>
