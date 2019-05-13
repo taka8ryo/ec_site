@@ -6,6 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def prepare_basket
-    basket || crerate_basket
+    basket || create_basket
   end
 end
