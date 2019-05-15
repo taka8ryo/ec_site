@@ -20,8 +20,9 @@ gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem "hashid-rails", "~> 1.0"
-
 gem 'active_decorator'
+gem 'stripe'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
