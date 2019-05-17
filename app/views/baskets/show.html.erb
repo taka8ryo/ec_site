@@ -17,6 +17,18 @@
         <% end %>
       </table>
       <div class="basket_total-amount">合計金額 <%= @total_price %> 円</div>
+
+      <%= form_tag charge_path do %>
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_IHyJ5K6kDda8Gl9Z5RvZYBuc00Js2nfn1x"
+          data-amount=<%= @total_price %>
+          data-description="payment"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"
+          data-currency="jpy">
+        </script>
+      <% end %>
     </div>
   </div>
 </div>
