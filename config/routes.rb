@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   devise_for :users
   root 'home#index'
   resource :basket, only: [:show]
@@ -7,6 +8,9 @@ Rails.application.routes.draw do
     scope module: :products do
       resources :add_to_baskets, only: [:create]
       resources :delete_in_baskets, only: [:create]
+    end
+    namespace :admins do
+      resources :products
     end
   end
 end

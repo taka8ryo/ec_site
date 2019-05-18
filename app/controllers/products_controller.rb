@@ -1,14 +1,15 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin!
   def show
     @product = Product.find(params[:id])
   end
 
   def new
-    @product = Product.new
+    @product = current_admin.products.build
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = current_admin.products.build(product_params)
     if @product.save
       redirect_to root_path
     else
