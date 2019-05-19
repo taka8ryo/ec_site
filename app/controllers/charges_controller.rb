@@ -3,7 +3,7 @@ class ChargesController < ApplicationController
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
     token = params[:stripeToken]
     Stripe::Charge.create({
-      amount: @total_price ,
+      amount: @total_price,
       currency: 'jpy',
       description: 'Example charge',
       source: token
