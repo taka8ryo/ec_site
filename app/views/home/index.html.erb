@@ -1,18 +1,16 @@
 <div class="container">
-  <h1 class="product-all">商品一覧</h1>
-  <div class="row">
+  <div class="float_box">
+  <h1>Collection</h1>
     <% @products.each do |product| %>
-      <div class="col-md-6">
-        <%= link_to product_path(product), @product do %>
-        <div class="card" style="width: 29rem; height: 21rem;">
-            <img class="card-img-top" src="<%= product.image %>" alt="<%= product.name %>">
-            <p class="card-text"><%= product.name %> (<%= product.price %><%= product.unit %>)</p>
-          <div class="card-body">
-            <h6 class="card-text"><%= product.description %></h6>
-          </div>
-        </div>
-        <% end %>
-      </div>
+      <ul>
+        <li> <!-- ▼ アイテム -->
+          <%= link_to product_path(product), @product do %>
+            <img class="card-img-top" src="<%= product.image %>" alt="<%= product.name %>" class="image">
+            <p class="name"><%= product.name %></p>
+            <p class="price"><%= product.price %><%= product.unit %></p>
+          <% end %>
+        </li> <!-- ▲ アイテム -->
+      </ul>
     <% end %>
   </div>
 </div>
