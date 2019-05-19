@@ -1,24 +1,11 @@
-# README
+<h1>簡易的なECサイトです</h1>
+<p>https://simple-ecsite.herokuapp.com/</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h1>実装した機能</h1>
+<ul>
+  <li>deviseを利用したログイン機能</li>
+  <li>商品登録可能なadmin userを作成</li>
+  <li>画像アップロード機能(本番環境ではS3を利用)</li>
+  <li>クレジット決済機能(stripe)</li>
+  <li>rubocop</li>
+</ul>
