@@ -11,7 +11,7 @@
         <% @products.each do |product| %>
           <tr>
             <td><%= product.name %></td>
-            <td><%= product.price %><%= product.unit %></td>
+            <td><%= product.display_price %></td>
             <td><%= link_to "×", product_delete_in_baskets_path(product), method: :post, data:{ confirm: "削除しますか?" } %></td>
           </tr>
         <% end %>
