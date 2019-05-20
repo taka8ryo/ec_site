@@ -20,7 +20,7 @@ Bundler.require(*Rails.groups)
 Dotenv::Railtie.load
 module EcSite
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    # Initialize configuration defaults  originally generated Rails version.
     config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -35,7 +35,7 @@ module EcSite
       g.test_framework :rspec,
       view_specs: false,
       helper_specs: false,
-      routing_specs: false,
+      routing_specs: false
     end
   end
 end
