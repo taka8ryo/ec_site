@@ -20,6 +20,9 @@
       <div class="basket_total-amount">合計金額 <%= @total_price %> 円</div>
 
       <%= form_tag charge_path do %>
+        <% @products.each do |p| %>
+          <%= hidden_field_tag 'product_ids[]', p.id %>
+        <% end %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="pk_test_IHyJ5K6kDda8Gl9Z5RvZYBuc00Js2nfn1x"
