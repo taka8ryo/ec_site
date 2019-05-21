@@ -6,6 +6,8 @@ class ChargesController < ApplicationController
 
     products = current_user.basket.products.where(id: product_ids)
     total = products.where(unit: :yen).sum(:price)
+    basket_products = current_user.basket.products.where(id: product_ids)
+    basket_products.each(&:destroy!)
     Stripe::Charge.create({
       amount: total,
       currency: 'jpy',
