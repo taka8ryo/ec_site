@@ -17,7 +17,7 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'faker'
 gem 'simple_form'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 gem "hashid-rails", "~> 1.0"
 gem 'active_decorator'
